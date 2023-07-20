@@ -42,4 +42,5 @@ RedirectMatch 301 ^/img/(.*)$ https://blez-state-file.s3.amazonaws.com/$1
 ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+
 ....................................................................
