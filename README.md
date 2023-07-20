@@ -34,12 +34,12 @@ Step4 : Last but not least give propper rewrite rule from img directory to S3 bu
 vi html_site.conf
 
 <VirtualHost *:80>
-      servername example.com
-      DocumentRoot /var/www/html
+servername example.com
+DocumentRoot /var/www/html
 
 RedirectMatch 301 ^/img/(.*)$ https://blez-state-file.s3.amazonaws.com/$1
 
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ....................................................................
