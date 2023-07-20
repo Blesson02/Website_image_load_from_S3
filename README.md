@@ -30,6 +30,7 @@ Step3 : Give propper bucket policy. (This will provide access to all users ) and
 
 Step4 : Last but not least give propper rewrite rule from img directory to S3 bucket URL.
 
+For Apache :-
 ....................................................................
 vi html_site.conf
 
@@ -43,4 +44,43 @@ ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
+....................................................................
+
+or
+
+For nginx :-
+....................................................................
+
+vi html_site
+
+server {
+  listen 80;
+  listen [::]:80;
+  server_name www.example.com example.com;
+
+     root /var/www/html;
+     index index.php index.html index.htm index.nginx-debian.html;
+
+  error_log /var/log/nginx/wordpress.error;
+  access_log /var/log/nginx/wordpress.access;
+
+  location / {
+ try_files $uri $uri/ =404;
+  }
+
+    location ~ ^/img/(.*)$ {
+        return 301 https://blez-state-file.s3.amazonaws.com/$1;
+    }
+
+
+  error_page 404 /404.html;
+  error_page 500 502 503 504 /50x.html;
+
+  client_max_body_size 20M;
+
+  location = /50x.html {
+    root /usr/share/nginx/html;
+  }
+
+}
 ....................................................................
