@@ -1,3 +1,33 @@
+---
+| 🗺 Routes 🗺 | 🚧 Usage 🚧 |
+| :-: | :-: |
+| `/api` | For API. |
+| `/file` | For streaming files. |
+| `/dl` | For downloading a file. |
+| `/<name>` | Says Hello! 🤚 |
+| `/code` | For redirection. |
+| `/cookies/set` | For setting cookies. |
+| `/cookies/get` | For retrieving cookies. |
+| `/cookies/del` | For deleting cookies. |
+| `/headers` | For working with Headers. |
+| `/ip` | For location based user interface. |
+| `/q` | For getting the parameters passed with URL. |
+
+---
+## How to use this ?
+- Don't be scared 😬 by watching a ton files, Most are just to configure the deploy settings. 🏋️‍♂️
+- Star this repository. ⭐️
+- Make a new repository by clicking [here.](https://github.com/jainamoswal/Flask-Example/generate) 👲
+- Go to [modules folder](modules). 📂
+- Add or modify the plugins. ✏️
+- Crawl any hosting provider. 🕷
+- Link your (Newly generated 🍽) repository with it. 🔗
+- Deploy it there or replace your username [here](#deployments) and deploy using buttons. 🚀
+- And done. ✅
+
+
+
+
 # Website_image_loaf_from_S3
 #In this Doc we can see an HTML website's images are loading from S3 bucket
 
